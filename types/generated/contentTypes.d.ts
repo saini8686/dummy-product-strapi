@@ -369,13 +369,12 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
-export interface ApiNameName extends Struct.CollectionTypeSchema {
-  collectionName: 'names';
+export interface ApiResultResult extends Struct.CollectionTypeSchema {
+  collectionName: 'results';
   info: {
-    description: '';
-    displayName: 'Results';
-    pluralName: 'names';
-    singularName: 'name';
+    displayName: 'Result';
+    pluralName: 'results';
+    singularName: 'result';
   };
   options: {
     draftAndPublish: true;
@@ -384,17 +383,20 @@ export interface ApiNameName extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    Date: Schema.Attribute.Date;
+    date: Schema.Attribute.Date;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<'oneToMany', 'api::name.name'> &
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::result.result'
+    > &
       Schema.Attribute.Private;
-    Name: Schema.Attribute.String;
-    Number: Schema.Attribute.String;
+    name: Schema.Attribute.String;
+    number: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    Waiting: Schema.Attribute.String;
+    waiting: Schema.Attribute.String;
   };
 }
 
@@ -907,7 +909,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
-      'api::name.name': ApiNameName;
+      'api::result.result': ApiResultResult;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

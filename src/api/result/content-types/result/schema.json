@@ -1,26 +1,25 @@
 {
   "kind": "collectionType",
-  "collectionName": "names",
+  "collectionName": "results",
   "info": {
-    "singularName": "name",
-    "pluralName": "names",
-    "displayName": "Results",
-    "description": ""
+    "singularName": "result",
+    "pluralName": "results",
+    "displayName": "Result"
   },
   "options": {
     "draftAndPublish": true
   },
   "attributes": {
-    "Name": {
+    "name": {
       "type": "string"
     },
-    "Number": {
+    "number": {
       "type": "string"
     },
-    "Waiting": {
+    "waiting": {
       "type": "string"
     },
-    "Date": {
+    "date": {
       "type": "date"
     }
   }
