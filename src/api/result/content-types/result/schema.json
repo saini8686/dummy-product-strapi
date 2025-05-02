@@ -4,7 +4,8 @@
   "info": {
     "singularName": "result",
     "pluralName": "results",
-    "displayName": "Result"
+    "displayName": "Result",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -20,7 +21,7 @@
       "type": "string"
     },
     "date": {
-      "type": "date"
+      "type": "string"
     }
   }
 }
